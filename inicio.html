@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calipso RP — FiveM Roleplay</title>
+  <link rel="icon" href="./Imagenes/logorojo1.png"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div id="pageContent">
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="inicio.html" class="nav-logo">
+      <span class="nav-logo-name">CALIPSO <span>RP</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="inicio.html" class="active">Inicio</a></li>
+      <li><a href="./Articulos.html">Tienda</a></li>
+      <li><a href="./Contacto.html">Contacto</a></li>
+      <a href="https://discord.gg/zxBqZYBh" target="_blank" class="nav-discord">
+        <svg width="16" height="12" viewBox="0 0 71 55" fill="currentColor"><path d="M60.1 4.9A58.5 58.5 0 0 0 45.5.4a40.7 40.7 0 0 0-1.8 3.7 54.1 54.1 0 0 0-16.3 0A39.4 39.4 0 0 0 25.5.4 58.4 58.4 0 0 0 10.9 5C1.6 18.8-1 32.3.3 45.5a59 59 0 0 0 18 9.1 44.4 44.4 0 0 0 3.8-6.2 38.4 38.4 0 0 1-6-2.9l1.4-1.1a42 42 0 0 0 36 0l1.5 1.1a38.3 38.3 0 0 1-6 2.9 44.3 44.3 0 0 0 3.8 6.2 58.8 58.8 0 0 0 18-9.1C72.1 30.2 68 16.8 60.1 4.9ZM23.7 37.3c-3.5 0-6.4-3.2-6.4-7.2s2.8-7.2 6.4-7.2 6.5 3.3 6.4 7.2c0 4-2.8 7.2-6.4 7.2Zm23.6 0c-3.5 0-6.4-3.2-6.4-7.2s2.8-7.2 6.4-7.2 6.5 3.3 6.4 7.2c0 4-2.8 7.2-6.4 7.2Z"/></svg>
+        Discord
+      </a>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="./Imagenes/load_scale_1x_prob-3.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">CALIPSO</h1>
+      <span class="hero-title-sub">ROLEPLAY</span>
+      <p class="hero-desc">
+        El servidor de roleplay más exclusivo de FiveM. Vehículos únicos, armas VIP, mafias y carteles. Tu historia empieza aquí.
+      </p>
+      <div class="hero-btns">
+        <a href="./Articulos.html" class="btn-main">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          Ver Tienda
+        </a>
+        <a href="https://discord.gg/zxBqZYBh" target="_blank" class="btn-ghost">
+          <svg width="16" height="12" viewBox="0 0 71 55" fill="currentColor"><path d="M60.1 4.9A58.5 58.5 0 0 0 45.5.4a40.7 40.7 0 0 0-1.8 3.7 54.1 54.1 0 0 0-16.3 0A39.4 39.4 0 0 0 25.5.4 58.4 58.4 0 0 0 10.9 5C1.6 18.8-1 32.3.3 45.5a59 59 0 0 0 18 9.1 44.4 44.4 0 0 0 3.8-6.2 38.4 38.4 0 0 1-6-2.9l1.4-1.1a42 42 0 0 0 36 0l1.5 1.1a38.3 38.3 0 0 1-6 2.9 44.3 44.3 0 0 0 3.8 6.2 58.8 58.8 0 0 0 18-9.1C72.1 30.2 68 16.8 60.1 4.9ZM23.7 37.3c-3.5 0-6.4-3.2-6.4-7.2s2.8-7.2 6.4-7.2 6.5 3.3 6.4 7.2c0 4-2.8 7.2-6.4 7.2Zm23.6 0c-3.5 0-6.4-3.2-6.4-7.2s2.8-7.2 6.4-7.2 6.5 3.3 6.4 7.2c0 4-2.8 7.2-6.4 7.2Z"/></svg>
+          Unirse al Discord
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat-item reveal">
+      <span class="stat-lbl">Jugadores activos</span>
+    </div>
+    <div class="stat-item reveal">
+      <span class="stat-lbl">Slots online</span>
+    </div>
+    <div class="stat-item reveal">
+      <span class="stat-lbl">Coches VIP</span>
+    </div>
+    <div class="stat-item reveal">
+      <span class="stat-lbl">Horas al día</span>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+    <div class="reveal">
+      <h2 class="section-title">TODO LO QUE NECESITAS</h2>
+      <p class="section-sub">Un servidor construido para la experiencia definitiva. Contenido exclusivo, comunidad activa e infraestructura de alto nivel.</p>
+      <div class="section-line"></div>
+    </div>
+    <div class="features-grid">
+
+      <div class="feature-card reveal">
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <rect x="1" y="3" width="15" height="13" rx="2"/>
+          <path d="M16 8h4l3 3v5h-7V8z"/>
+          <circle cx="5.5" cy="18.5" r="2.5"/>
+          <circle cx="18.5" cy="18.5" r="2.5"/>
+        </svg>
+        <h3 class="feature-title">Coches VIP & Blindados</h3>
+        <p class="feature-desc">Desde supercars de competición hasta vehículos blindados de nivel militar. La flota más exclusiva de FiveM.</p>
+      </div>
+
+      <div class="feature-card reveal">
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/>
+        </svg>
+        <h3 class="feature-title">Rangos & Privilegios</h3>
+        <p class="feature-desc">Sistema de rangos completo con beneficios reales. Cuanto más alto llegues, más poder desbloqueas en el servidor.</p>
+      </div>
+
+      <div class="feature-card reveal">
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+        </svg>
+        <h3 class="feature-title">Mafias & Carteles</h3>
+        <p class="feature-desc">Únete a organizaciones criminales o crea la tuya. Territorios, rivalidades y negocios ilegales en un mundo vivo.</p>
+      </div>
+
+      <div class="feature-card reveal">
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+        <h3 class="feature-title">Peds Exclusivos</h3>
+        <p class="feature-desc">Skins de personaje únicos disponibles solo en Calipso RP. Personaliza tu identidad y destaca en cada escena.</p>
+      </div>
+
+      <div class="feature-card reveal">
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <h3 class="feature-title">Armas VIP</h3>
+        <p class="feature-desc">Arsenal exclusivo con skins personalizadas de Calipso. Pistolas, rifles y armas únicas que no encontrarás en ningún otro servidor.</p>
+      </div>
+
+      <div class="feature-card reveal">
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <h3 class="feature-title">Servidor 24/7</h3>
+        <p class="feature-desc">Infraestructura dedicada de alto rendimiento. Sin lag, sin caídas. Uptime garantizado para que siempre puedas jugar.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section">
+    <div class="section" style="padding-top:0;padding-bottom:0">
+      <div class="reveal" style="padding-top:80px">
+        <h2 class="section-title">EMPIEZA EN 3 PASOS</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="how-grid">
+        <div class="how-step reveal">
+          <span class="how-num"></span>
+          <h3 class="how-title">Entra al Discord</h3>
+          <p class="how-desc">Únete a nuestro servidor de Discord. Allí encontrarás toda la información, reglas y el equipo de soporte listo para ayudarte.</p>
+          <svg class="how-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="how-step reveal">
+          <span class="how-num"></span>
+          <h3 class="how-title">Elige tu artículo VIP</h3>
+          <p class="how-desc">Navega por nuestra tienda y elige el artículo que quieras. Coches, armas, rangos, peds... todo permanente y sin pérdida al borrar personaje.</p>
+          <svg class="how-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="how-step reveal">
+          <span class="how-num"></span>
+          <h3 class="how-title">Abre un ticket</h3>
+          <p class="how-desc">Abre un ticket en Discord indicando tu nombre en el servidor. Un administrador te entregará tu artículo al momento. ¡Así de fácil!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN -->
+  <section class="join" id="join">
+    <div class="reveal">
+      <h2 class="join-title">¿LISTO PARA <span>ENTRAR?</span></h2>
+      <p class="join-sub">Miles de jugadores ya viven su historia en Calipso RP. La tuya empieza hoy.</p>
+      <div class="hero-btns">
+        <a href="https://discord.gg/calipso" target="_blank" class="btn-main">
+          <svg width="16" height="12" viewBox="0 0 71 55" fill="currentColor"><path d="M60.1 4.9A58.5 58.5 0 0 0 45.5.4a40.7 40.7 0 0 0-1.8 3.7 54.1 54.1 0 0 0-16.3 0A39.4 39.4 0 0 0 25.5.4 58.4 58.4 0 0 0 10.9 5C1.6 18.8-1 32.3.3 45.5a59 59 0 0 0 18 9.1 44.4 44.4 0 0 0 3.8-6.2 38.4 38.4 0 0 1-6-2.9l1.4-1.1a42 42 0 0 0 36 0l1.5 1.1a38.3 38.3 0 0 1-6 2.9 44.3 44.3 0 0 0 3.8 6.2 58.8 58.8 0 0 0 18-9.1C72.1 30.2 68 16.8 60.1 4.9ZM23.7 37.3c-3.5 0-6.4-3.2-6.4-7.2s2.8-7.2 6.4-7.2 6.5 3.3 6.4 7.2c0 4-2.8 7.2-6.4 7.2Zm23.6 0c-3.5 0-6.4-3.2-6.4-7.2s2.8-7.2 6.4-7.2 6.5 3.3 6.4 7.2c0 4-2.8 7.2-6.4 7.2Z"/></svg>
+          Unirse ahora
+        </a>
+        <a href="tienda.html" class="btn-ghost">Ver artículos VIP</a>
+      </div>
+    </div>
+  </section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <span class="footer-brand">CALIPSO RP</span>
+      <p class="footer-about">El servidor de roleplay más exclusivo de FiveM. Vive la experiencia, escribe tu leyenda.</p>
+      <a href="https://discord.gg/zxBqZYBh" target="_blank" class="nav-discord" style="display:inline-flex">
+        <svg width="16" height="12" viewBox="0 0 71 55" fill="currentColor">
+          <path d="M60.1 4.9A58.5 58.5 0 0 0 45.5.4a40.7 40.7 0 0 0-1.8 3.7 54.1 54.1 0 0 0-16.3 0A39.4 39.4 0 0 0 25.5.4 58.4 58.4 0 0 0 10.9 5C1.6 18.8-1 32.3.3 45.5a59 59 0 0 0 18 9.1 44.4 44.4 0 0 0 3.8-6.2 38.4 38.4 0 0 1-6-2.9l1.4-1.1a42 42 0 0 0 36 0l1.5 1.1a38.3 38.3 0 0 1-6 2.9 44.3 44.3 0 0 0 3.8 6.2 58.8 58.8 0 0 0 18-9.1C72.1 30.2 68 16.8 60.1 4.9ZM23.7 37.3c-3.5 0-6.4-3.2-6.4-7.2s2.8-7.2 6.4-7.2 6.5 3.3 6.4 7.2c0 4-2.8 7.2-6.4 7.2Zm23.6 0c-3.5 0-6.4-3.2-6.4-7.2s2.8-7.2 6.4-7.2 6.5 3.3 6.4 7.2c0 4-2.8 7.2-6.4 7.2Z"/>
+        </svg>
+        Discord
+      </a>
+
+      <!-- REDES SOCIALES -->
+      <span class="footer-social-label" style="margin-top:18px;">Síguenos</span>
+      <div class="footer-social">
+        <!-- TikTok -->
+        <a href="www.tiktok.com/@calipsorp" target="_blank" class="footer-social-link" aria-label="TikTok">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.16 8.16 0 0 0 4.77 1.52V6.75a4.85 4.85 0 0 1-1-.06z"/>
+          </svg>
+        </a>
+        <!-- Instagram -->
+        <a href="#" target="_blank" class="footer-social-link" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div>
+  <p class="footer-col-title">Titular</p>
+  <ul class="footer-links">
+    <li style="display:flex;align-items:center;gap:8px;color:var(--gray)">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+      Farruko reyes
+    </li>
+    <li style="display:flex;align-items:center;gap:8px;color:var(--gray)">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+        <circle cx="12" cy="10" r="3"/>
+      </svg>
+      España
+    </li>
+    <li>
+      <a href="mailto:calipsorp2@gmail.com" style="display:flex;align-items:center;gap:8px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        calipsorp2@gmail.com
+      </a>
+    </li>
+  </ul>
+</div>
+
+    <div>
+      <p class="footer-col-title">Navegación</p>
+      <ul class="footer-links">
+        <li><a href="./inicio.html">Inicio</a></li>
+        <li><a href="./Articulos.html">Tienda VIP</a></li>
+        <li><a href="./Contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Legal</p>
+      <ul class="footer-links">
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="./Privacidad.html">Política de privacidad</a></li>
+        <li><a href="./Paginacookies.html">Política de cookies</a></li>
+        <li><a href="#">Reembolsos</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- MÉTODOS DE PAGO + COPYRIGHT -->
+  <div class="footer-bottom-full">
+
+    <!-- Logos de pago centrados -->
+    <div class="footer-payment-row" style="border-top:none; padding-top:0; margin-top:0;">
+      <span class="footer-payment-label">Métodos de pago aceptados</span>
+      <div class="footer-payment-logos">
+        <!-- Bizum -->
+        <div class="footer-payment-logo">
+          <svg width="90" height="28" viewBox="0 0 180 55" xmlns="http://www.w3.org/2000/svg">
+            <rect width="180" height="55" rx="6" fill="#00ADEF"/>
+            <text x="82" y="37" font-family="Arial Black, sans-serif" font-weight="900" font-size="28" fill="white" text-anchor="middle" letter-spacing="-1">bizum</text>
+            <circle cx="156" cy="27" r="14" fill="#FF6600"/>
+            <text x="156" y="33" font-family="Arial, sans-serif" font-weight="900" font-size="16" fill="white" text-anchor="middle">b</text>
+          </svg>
+        </div>
+        <!-- PayPal -->
+        <div class="footer-payment-logo">
+          <svg width="90" height="28" viewBox="0 0 124 33" xmlns="http://www.w3.org/2000/svg">
+            <path d="M46.211 6.749h-6.839a.95.95 0 0 0-.939.802l-2.766 17.537a.57.57 0 0 0 .564.658h3.265a.95.95 0 0 0 .939-.803l.746-4.73a.95.95 0 0 1 .938-.803h2.165c4.505 0 7.105-2.18 7.784-6.496.306-1.89.013-3.375-.872-4.415-.972-1.142-2.696-1.75-4.985-1.75zM47 13.154c-.374 2.454-2.249 2.454-4.062 2.454h-1.032l.724-4.583a.57.57 0 0 1 .563-.481h.473c1.235 0 2.4 0 3.002.704.359.42.469 1.044.332 1.906z" fill="#003087"/>
+            <path d="M66.654 13.075h-3.275a.57.57 0 0 0-.563.481l-.145.916-.229-.332c-.709-1.029-2.29-1.373-3.868-1.373-3.619 0-6.71 2.741-7.312 6.586-.313 1.918.132 3.752 1.22 5.031.998 1.176 2.426 1.666 4.125 1.666 2.916 0 4.533-1.875 4.533-1.875l-.146.91a.57.57 0 0 0 .562.66h2.95a.95.95 0 0 0 .939-.803l1.77-11.209a.568.568 0 0 0-.561-.658zm-4.565 6.374c-.316 1.871-1.801 3.127-3.695 3.127-.951 0-1.711-.305-2.199-.883-.484-.574-.668-1.391-.514-2.301.295-1.855 1.805-3.152 3.67-3.152.93 0 1.686.309 2.184.892.499.589.697 1.411.554 2.317z" fill="#003087"/>
+            <path d="M84.096 13.075h-3.291a.954.954 0 0 0-.787.417l-4.539 6.686-1.924-6.425a.953.953 0 0 0-.912-.678h-3.234a.57.57 0 0 0-.541.754l3.625 10.638-3.408 4.811a.57.57 0 0 0 .465.9h3.287a.949.949 0 0 0 .781-.408l10.946-15.8a.57.57 0 0 0-.468-.895z" fill="#003087"/>
+            <path d="M94.992 6.749h-6.84a.95.95 0 0 0-.938.802l-2.766 17.537a.569.569 0 0 0 .562.658h3.51a.665.665 0 0 0 .656-.562l.785-4.971a.95.95 0 0 1 .938-.803h2.164c4.506 0 7.105-2.18 7.785-6.496.307-1.89.012-3.375-.873-4.415-.971-1.142-2.694-1.75-4.983-1.75zm.789 6.405c-.373 2.454-2.248 2.454-4.062 2.454h-1.031l.725-4.583a.568.568 0 0 1 .562-.481h.473c1.234 0 2.4 0 3.002.704.359.42.468 1.044.331 1.906z" fill="#009cde"/>
+            <path d="M115.434 13.075h-3.273a.567.567 0 0 0-.562.481l-.145.916-.23-.332c-.709-1.029-2.289-1.373-3.867-1.373-3.619 0-6.709 2.741-7.311 6.586-.312 1.918.131 3.752 1.219 5.031 1 1.176 2.426 1.666 4.125 1.666 2.916 0 4.533-1.875 4.533-1.875l-.146.91a.57.57 0 0 0 .564.66h2.949a.95.95 0 0 0 .938-.803l1.771-11.209a.571.571 0 0 0-.565-.658zm-4.565 6.374c-.314 1.871-1.801 3.127-3.695 3.127-.949 0-1.711-.305-2.199-.883-.484-.574-.666-1.391-.514-2.301.297-1.855 1.805-3.152 3.67-3.152.93 0 1.686.309 2.184.892.501.589.699 1.411.554 2.317z" fill="#009cde"/>
+            <path d="M119.962 7.182l-2.807 17.854a.569.569 0 0 0 .562.658h2.822c.469 0 .867-.34.939-.803l2.768-17.536a.57.57 0 0 0-.562-.659h-3.16a.571.571 0 0 0-.562.486z" fill="#009cde"/>
+            <path d="M7.266 29.154a.604.604 0 0 1-.598.52H3.881a.604.604 0 0 1-.597-.709L6.092 7.182a.952.952 0 0 1 .938-.802h7.896c2.759 0 4.806.625 6.084 1.858 1.16 1.125 1.614 2.606 1.387 4.517-.047.39-.127.795-.242 1.209" fill="#003087"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fila copyright -->
+    <div class="footer-bottom-row">
+      <span>© 2025 Calipso RP — Todos los derechos reservados</span>
+      <span class="tag">CALIPSO RP</span>
+    </div>
+
+  </div>
+</footer>
+
+  </div>
+
+   <!-- COOKIES — fuera del pageContent -->
+  <div class="cookie-overlay" id="cookieOverlay"></div>
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-top">
+      <div class="cookie-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="8" cy="9" r="1" fill="currentColor"/><circle cx="15" cy="8" r="1" fill="currentColor"/><circle cx="16" cy="14" r="1" fill="currentColor"/><circle cx="10" cy="15" r="1.5" fill="currentColor"/></svg>
+      </div>
+      <div class="cookie-text">
+        <h3>COOKIES & PRIVACIDAD</h3>
+        <p>Usamos cookies para mejorar tu experiencia. <a href="./Paginacookies.html">Política de cookies</a></p>
+      </div>
+    </div>
+<div class="cookie-btns">
+  <button class="cookie-btn-all" id="cookieAll">Aceptar todas</button>
+  <button class="cookie-btn-essential" id="cookieEssential">Solo esenciales</button>
+  <button class="cookie-btn-reject" id="cookieReject">Rechazar</button>
+</div>
+  </div>
+  
+  <script src="./main.js"></script>
+</body>
+</html>
